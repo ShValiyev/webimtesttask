@@ -1,0 +1,17 @@
+.clear {
+    clear: both;
+}
+
+.user-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.user-card img {
+    float: left;
+}
+
+.user-data {
+    padding-left: 60px;
+}

@@ -1,0 +1,52 @@
+<% layout('./layout/page') -%>
+<% block('title', 'Авторизация') -%>
+
+<%-partial('./partials/header')%>
+
+<div class="container" style="margin-top:30px">
+    <% if(authorized) { %>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="container">
+                    <div class="card" style="margin-bottom: 15px;">
+                        <div class="card-body">
+                            <img class="card-img-top" src="<%= authorized.photoUrl%>" alt="Photo">
+                        </div>
+                        <div class="card-footer">
+                            <p><strong>Имя:</strong>  <%= authorized.username%> </p>
+                            <% if(authorized.birthday) {%>
+                                <p><strong>Дата рождения:</strong>  <%= authorized.birthday%> </p>
+                            <% } else { %>
+                                <p><strong>Дата рождения:</strong>  скрыто </p>
+                            <% } %>
+                            <p><strong>Пол:</strong>  <%= authorized.sex%> </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <% authorized.friends.forEach(function(item){ %>
+                    <div class="user-card">
+                        <img src="<%= item.photo_50 %>" alt="">
+                        <div class="user-data">
+                            <span>Имя: <%= item.last_name %> <%= item.first_name %></span>
+                            <br>
+                            <% if(item.city) {%>
+                                <span>Город: <%= item.city.title %> </span> 
+                            <% } else { %>
+                                <span>Город: не указан </span> 
+                            <% } %>
+                            <br>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                <% }); %>
+            </div>
+        </div>
+    <% } else { %>
+        <h1>Вы не авторизованы!</h1>
+        <a class="nav-link" href="/auth/vk">Авторизоваться через ВКонтакте</a>
+    <% } %>
+</div>
+    
+<%-partial('./partials/scripts')%>

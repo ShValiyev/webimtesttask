@@ -1,0 +1,23 @@
+{
+    "port": 3000,
+    "appURL": "https://testtaskwebim.herokuapp.com",
+    "mongoose": {
+        "uri": "mongodb://Valiev:webim9949400@ds241537.mlab.com:41537/heroku_q5q12x2x",
+        "options": {
+            "useNewUrlParser": true
+        }
+    },
+    "session": {
+        "secret": "y8eXHTj37QxybvyguX9N3RKvaw4C4KC8TxZq8AcTp8WMYZxqMXsxuqUs5J4DWRgSG64ULGGvPQMNmBHhZ8zXLcWAtDpLNpPDme8v7uLrKX7rD3TEHDJ4HVtyD5YZcHDkCCqGbA5Ab98MzyTcCX4kkztB6bNsrV9F8q3cPwCyxxKbaXsX3kBWEuZzYxw2EMbvbhd9vTmjU8ag7FwwKMuwbBsw28tkjX3X99qAb737DveydPBnr7XzQDMvncDckHra",
+        "key": "sid",
+        "cookie": {
+            "path": "/",
+            "httpOnly": true,
+            "maxAge": null
+        }
+    },
+    "vk": {
+        "appId": 7029651,
+        "secretKey": "x09ojNMDrg3WQNCISR4O"
+    }
+}
